@@ -1,0 +1,7 @@
+[FATAL] 2022-09-13 13:14:55.728 [main] Demo - I am fatal
+[FATAL] 2022-09-13 13:15:29.315 [main] Demo - I am fatal
+[WARN ] 2022-09-13 13:15:29.317 [main] Demo - I am warn
+[INFO ] 2022-09-13 13:15:29.318 [main] Demo - I am Info
+[ERROR] 2022-09-13 13:15:29.318 [main] Demo - I am error
+[DEBUG] 2022-09-13 13:15:29.318 [main] Demo - I am debug
+[TRACE] 2022-09-13 13:15:29.318 [main] Demo - I am trace

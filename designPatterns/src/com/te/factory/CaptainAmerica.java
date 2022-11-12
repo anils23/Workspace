@@ -1,0 +1,16 @@
+package com.te.factory;
+
+public class CaptainAmerica implements Avengers {
+
+	@Override
+	public void nameOfActor() {
+		System.out.println("Chris Evans...!!!");
+	}
+
+	@Override
+	public Thread superpower() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

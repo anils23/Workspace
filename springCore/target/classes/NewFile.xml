@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.te.assignment.Employee" name="emp1">
+		<property name="name" value="Anil thapa" />
+		<property name="id" value="101" />
+		<property name="salary" value="25000" />
+		<property name="gender" value="male" />
+		<property name="department" value="development" />
+		<property name="address">
+			<bean class="com.te.assignment.Address" name="aniladdress">
+				<property name="buldingNo" value="12" />
+				<property name="buildingName" value="moshi" />
+				<property name="landmark" value="phase 12" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean class="com.te.assignment.Employee" name="emp2">
+		<property name="name" value="Sanjay thapa" />
+		<property name="id" value="102" />
+		<property name="salary" value="30000" />
+		<property name="gender" value="male" />
+		<property name="department" value="testing" />
+		<property name="address">
+			<bean class="com.te.assignment.Address" name="sanjayaddress">
+				<property name="buldingNo" value="15" />
+				<property name="buildingName" value="pune" />
+				<property name="landmark" value="phase 15" />
+			</bean>
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+
+	<bean class="com.te.assignment.Employee" name="emp3">
+		<property name="name" value="Bharat thapa" />
+		<property name="id" value="103" />
+		<property name="salary" value="35000" />
+		<property name="gender" value="male" />
+		<property name="department" value="Full stack Developer" />
+		<property name="address" ref="bharataddress2" />
+	</bean>
+
+	<bean class="com.te.assignment.Address" name="bharataddress1">
+		<property name="buldingNo" value="16" />
+		<property name="buildingName" value="bhosari" />
+		<property name="landmark" value="phase 10" />
+	</bean>
+
+	<bean class="com.te.assignment.Address" name="bharataddress2">
+		<property name="buldingNo" value="17" />
+		<property name="buildingName" value="indrayaninagar" />
+		<property name="landmark" value="phase 05" />
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+
+	<bean class="com.te.assignment.Employee" name="emp4">
+		<constructor-arg value="Renuka thapa" />
+		<constructor-arg value="001" />
+		<constructor-arg value="50000" />
+		<constructor-arg value="female" />
+		<constructor-arg value="accounting" />
+		<constructor-arg ref="renuaddress2" />
+	</bean>
+
+	<bean class="com.te.assignment.Address" name="renuaddress1">
+		<constructor-arg value="10" />
+		<constructor-arg value="moshi" />
+		<constructor-arg value="phase 2" />
+	</bean>
+
+	<bean class="com.te.assignment.Address" name="renuaddress2">
+		<constructor-arg value="12" />
+		<constructor-arg value="pune" />
+		<constructor-arg value="phase 05" />
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	<bean class="com.te.assignment.Employee" name="abcd">
+	<property name="list">
+	<list>
+	<ref bean="emp1"/>
+	<ref bean="emp2"/>
+	<ref bean="emp3"/>
+	<ref bean="emp4"/>
+	</list>
+	</property>
+	</bean>
+
+</beans>

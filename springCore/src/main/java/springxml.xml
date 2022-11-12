@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.te.springCore.User" name="bean1">
+		<property name="id" value="001" />
+		<property name="name" value="Anil Thapa" />
+		<property name="age" value="22" />
+	</bean>
+
+	<bean class="com.te.springCore.User" name="bean2">
+		<property name="id" value="002" />
+		<property name="name" value="Sanjay Thapa" />
+		<property name="age" value="25" />
+	</bean>
+
+	
+	
+	
+	
+
+	<bean class="com.te.spring.looseCoupling.User2">
+		<property name="database">
+			<ref bean="mysql" />
+		</property>
+	</bean>
+
+	<bean name="mysql"
+		class="com.te.spring.looseCoupling.MySqlDatabase" />
+	<bean name="oracle"
+		class="com.te.spring.looseCoupling.OracleDatabase" />
+		
+		
+		
+		
+	
+	<bean class="com.te.spring.depInjConstructor.User1" name="bean3">
+	<constructor-arg value="101"/>
+	<constructor-arg value="Bharat Thapa"/>
+	<constructor-arg value="22"/>
+	</bean>	
+	
+	
+	
+	
+	<bean class="com.te.spring.list.Demo">
+	<property name="list">
+	<list>
+	<value>Anil</value>
+	<value>Sanjay</value>
+	<value>Bharat</value>
+	</list>
+	</property>
+	</bean>
+
+</beans>
